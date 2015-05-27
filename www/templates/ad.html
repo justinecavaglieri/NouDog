@@ -1,0 +1,36 @@
+<ion-view view-title="Annonce">
+    <div id="wrapper" ng-controller="SingleCtrl">
+        <ion-content class="has-header">
+            <ion-list>
+                <ion-item>
+
+
+                    <div class="list card" >
+                        <div class="item">
+                            <h1>{{ads.title}}</h1>
+                            <img ng-src="{{ads.pics}}" width="300" height="400">
+                        </div>
+                        <div class="item item-body">
+                            <p>{{ads.content}}</p>
+                            <p>{{ads.phone}}</p>
+                            <h3>{{ads.email}}</h3>
+
+                        </div>
+                    </div>
+
+                </ion-item>
+            </ion-list>
+        </ion-content>
+        <icon-footer>
+        <div class="tabs foot">
+            <a class="tab-item" href="#/app/playlist/edit/{{ad.id}}" >
+                Editer
+            </a>
+            <a class="tab-item" ng-submit="deleteForm()">
+                Supprimer
+            </a>
+        </div>
+        </icon-footer>
+
+</ion-view>
+

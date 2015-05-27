@@ -1,0 +1,74 @@
+<ion-view view-title="Annonces" xmlns="http://www.w3.org/1999/html">
+    <div id="wrapper" ng-controller="SendCtrl">
+        <ion-content>
+            <ion-list>
+                <ion-item>
+
+<!-- apply the module and controller to our body so angular is applied to that -->
+<div class="container">
+    <div class="col-md-6 col-md-offset-3">
+
+        <!-- PAGE TITLE -->
+        <div class="page-header">
+            <h1><span class="glyphicon glyphicon-tower"></span> Ajouter une annonce :</h1></br>
+        </div>
+
+        <!-- SHOW ERROR/SUCCESS MESSAGES -->
+        <div id="messages"></div>
+        <!-- FORM -->
+        <form ng-submit="processForm()" >
+            <div class="list">
+                <!-- NAME -->
+                <div id="title-group" class="form-group" ng-class="{ 'has-error' : error }">
+                    <label class="item item-input item-floating-label">
+                    <input ng-model="formData.title" type="text" name="title" class="form-control" placeholder="Title">
+                    </label>
+                </div>
+
+                <div id="pics-group" class="form-group" ng-class="{ 'has-error' : error }">
+                    <label class="item item-input item-floating-label">
+                    <input ng-model="formData.pics" type="text" name="pics" class="form-control" placeholder="Pics">
+                    </label>
+                </div>
+
+                <div id="name_ad-group" class="form-group" ng-class="{ 'has-error' : error }">
+                    <label class="item item-input item-floating-label">
+                    <input ng-model="formData.name_at" type="text" name="name_ad" class="form-control" placeholder="Named_at">
+                    </label>
+                </div>
+
+                <div id="phone-group" class="form-group" ng-class="{ 'has-error' : error }">
+                    <label class="item item-input item-floating-label">
+                    <input ng-model="formData.phone" type="text" name="phone" class="form-control" placeholder="Phone">
+                    </label>
+                </div>
+
+                <div id="email-group" class="form-group" ng-class="{ 'has-error' : error }">
+                    <label class="item item-input item-floating-label">
+                    <input ng-model="formData.email" type="text" name="email" class="form-control" placeholder="Email">
+
+                    </label>
+                </div>
+                <!-- SUPERHERO NAME -->
+                <div id="content-group" class="form-group" ng-class="{ 'has-error' : error }">
+                    <label class="item item-input item-floating-label">
+                    <input ng-model="formData.content" type="text" name="content" class="form-control" placeholder="Content">
+                    </label>
+                </div>
+
+                <button type="submit" class="button button-block button-positive">
+                    <span class="glyphicon glyphicon-flash"></span> SUBMIT
+                </button>
+            </div>
+        </form>
+        <span class="input-label" ng-show="error">{{ error }}</span>
+
+        <!-- SHOW DATA FROM INPUTS AS THEY ARE BEING TYPED -->
+<pre>
+    {{ formData }}
+</pre>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </div>
+</ion-view>

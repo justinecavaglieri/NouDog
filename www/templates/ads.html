@@ -1,0 +1,29 @@
+<ion-view view-title="Annonces">
+    <div id="wrapper" ng-controller="HomeCtrl">
+        <ion-content class="all">
+            <ion-list>
+                <ion-item ng-repeat="ad in ads" href="#/app/ad/{{ad.id}}">
+
+                    <div class="list">
+
+                        <div class="item item-thumbnail-left" href="#/{{ad.id}}">
+                            <img ng-src="{{ad.pics}}">
+                            <h2>{{ad.title}}</h2>
+                            <p>{{ad.content}}</p>
+                        </div>
+
+
+                    </div>
+                </ion-item>
+            </ion-list>
+
+        </ion-content>
+        <ion-footer>
+            <div class="tabs tabs-icon-only foot">
+            <a class="tab-item" href="#/app/new">
+                <i class="ion-plus-circled plus"></i>
+            </a>
+    </div>
+        </ion-footer>
+    </div>
+</ion-view>
